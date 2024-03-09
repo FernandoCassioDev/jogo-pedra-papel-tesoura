@@ -1,0 +1,92 @@
+
+*{
+    font-family: Helvetica Neue, Helvetica, Arial;
+    font-weight: 400;
+    cursor: default;
+}
+
+#main{
+    
+    
+}
+
+#score{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+
+#player h2, #computer h2{
+    margin: 0;
+    padding: 0;
+}
+
+#player, #computer{
+    flex-grow: 1;
+
+    border-radius: 5px;
+    padding: 20px;
+
+    color: #fff;
+}
+
+#player{
+    background-color: #e74c3c;
+    
+}
+
+#player__name, #computer__name{
+    font-size: 24px;
+}
+
+#player__points, #computer__points{
+    position: absolute;
+    top: 8px;
+    font-size: 52px;
+}
+
+#player > #player__choice{
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#player  #player__choice  li {
+    display: inline;
+    padding: 0 15px;
+    
+}
+
+#player  #player__choice  a{
+    opacity: .2;
+}
+
+#player  #player__choice  a:hover{
+    opacity: initial;
+}
+
+#player #player__choice img {
+    max-width: 80px;
+}
+
+
+
+#versus{
+    
+   
+}
+
+#computer{
+    background-color: #3498db;
+   
+
+}
+
+#message{
+
+    clear: both;
+}
+
