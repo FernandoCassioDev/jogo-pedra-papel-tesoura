@@ -5,9 +5,9 @@
     cursor: default;
 }
 
-#main{
-    
-    
+#main #title{
+    text-align: center;
+    color: #2d3436;
 }
 
 #score{
@@ -24,6 +24,7 @@
 }
 
 #player, #computer{
+    position: relative;
     flex-grow: 1;
 
     border-radius: 5px;
@@ -33,7 +34,7 @@
 }
 
 #player{
-    background-color: #e74c3c;
+    background-color: #ff7675;
     
 }
 
@@ -47,36 +48,42 @@
     font-size: 52px;
 }
 
-#player > #player__choice{
+#player__points{
+    right: 20px;
+}
+
+#player > #player__choice, #computer > #computer__choice{
     list-style: none;
     text-align: center;
-    margin: 0;
+    margin: 20 0 0;
     padding: 0;
 }
 
-#player  #player__choice  li {
+#player  #player__choice  li, #computer  #computer__choice  li {
     display: inline;
     padding: 0 15px;
     
 }
 
-#player  #player__choice  a{
+#player  #player__choice  a, #computer  #computer__choice  a{
     opacity: .2;
 }
 
-#player  #player__choice  a:hover{
+#player  #player__choice  a:hover, #computer  #computer__choice  a:hover{
     opacity: initial;
 }
 
-#player #player__choice img {
+#player #player__choice img, #computer #computer__choice img {
     max-width: 80px;
 }
 
-
+#computer__name{
+    text-align: right;
+}
 
 #versus{
-    
-   
+    font-size: 50px;
+    padding: 0 40px;
 }
 
 #computer{
@@ -86,7 +93,11 @@
 }
 
 #message{
-
-    clear: both;
+    background-color: #663e72;
+    border-radius: 5px;
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    margin: 20px 0;
 }
 
