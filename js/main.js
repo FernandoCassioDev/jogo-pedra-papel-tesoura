@@ -5,16 +5,18 @@ var playerPoints = 0;
 var computerChoice = 0;
 var computerPoints = 0;
 
-playerName = prompt('digite seu nome');
-message('bem vindo '+ playerName +', está preparado? Escolha uma opção acima...');
-showName(playerName)
+playerName = prompt("digite seu nome");
+message(
+  "bem vindo " + playerName + ", está preparado? Escolha uma opção acima..."
+);
+showName(playerName);
 
 //exibe mensagem
-function message(text){
+function message(text) {
   document.getElementById("message").innerHTML = text;
 }
 
-function showName(name){
+function showName(name) {
   document.getElementById("player__name").innerHTML = name;
 }
 
@@ -50,25 +52,28 @@ function calcWinner(player, computer) {
 }
 
 //soma pontos para o player
-function addPointsPlayer(){
-  playerPoints ++
-  document.getElementById('player__points').innerHTML = playerPoints
+function addPointsPlayer() {
+  playerPoints++;
+  document.getElementById("player__points").innerHTML = playerPoints;
 }
 
 //soma pontos para o computador
-function addPointsComputer(){
-  computerPoints ++
-  document.getElementById('computer__points').innerHTML = computerPoints
-
+function addPointsComputer() {
+  computerPoints++;
+  document.getElementById("computer__points").innerHTML = computerPoints;
 }
 
 //adiciona a classse selected
-function select(tipo, escolha){
-  document.getElementById(tipo + '__choice-' + escolha).classList.add('selected')
+function select(tipo, escolha) {
+  document
+    .getElementById(tipo + "__choice-" + escolha)
+    .classList.add("selected");
 }
 
-function unSelect(tipo, escolha){
-  document.getElementById(tipo + '__choice-' + escolha).classList.remove('selected')
+function unSelect(tipo, escolha) {
+  document
+    .getElementById(tipo + "__choice-" + escolha)
+    .classList.remove("selected");
 }
 
 //escolhe a jogada do usuário
@@ -77,44 +82,37 @@ function unSelect(tipo, escolha){
 //3 - tesoura
 function play(choice) {
   playerChoice = choice;
-  select('player', playerChoice)
+  select("player", playerChoice);
   //sortear a jogada do computador
   computerChoice = choose(1, 3);
-  select('computer', computerChoice)
+  select("computer", computerChoice);
   //calcular quem ganhou
   var winner = calcWinner(playerChoice, computerChoice);
-  
-  if(winner === 0){
-    message('empate')
-  }else if(winner === 1){
-    message('Ponto para ' + playerName)
-    addPointsPlayer()
-  }else if(winner === 2){
-    message('ponto para o computador')
-    addPointsComputer()
+
+  if (winner === 0) {
+    message("empate");
+  } else if (winner === 1) {
+    message("Ponto para " + playerName);
+    addPointsPlayer();
+  } else if (winner === 2) {
+    message("ponto para o computador");
+    addPointsComputer();
   }
 
-  setTimeout(function() { 
-    unSelect('player', playerChoice)
-    unSelect('computer', computerChoice)
+  setTimeout(function () {
+    unSelect("player", playerChoice);
+    unSelect("computer", computerChoice);
 
-    message(playerName + 'escolha uma opção')
-
-  }, 
-  3500);
-
-
+    message(playerName + "escolha uma opção");
+  }, 3500);
 }
 
-document.getElementById("player__choice-1").onclick = function(){
-  play(1)
-}
-document.getElementById("player__choice-2").onclick = function() {
-  play(2)
-}
-document.getElementById("player__choice-3").onclick = function() {
-  play(3)
-}
-
-
-
+document.getElementById("player__choice-1").onclick = function () {
+  play(1);
+};
+document.getElementById("player__choice-2").onclick = function () {
+  play(2);
+};
+document.getElementById("player__choice-3").onclick = function () {
+  play(3);
+};
