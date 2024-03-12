@@ -69,8 +69,9 @@
     opacity: .2;
 }
 
-#player  #player__choice  a:hover, #computer  #computer__choice  a:hover{
-    opacity: initial;
+#player  #player__choice  a:hover,
+#player  #player__choice  a.selected, #computer  #computer__choice  a.selected {
+    opacity: 1;
 }
 
 #player #player__choice img, #computer #computer__choice img {
