@@ -103,7 +103,7 @@ function play(choice) {
     unSelect("player", playerChoice);
     unSelect("computer", computerChoice);
 
-    message(playerName + "escolha uma opção");
+    message(playerName + " escolha uma opção");
   }, 3500);
 }
 
