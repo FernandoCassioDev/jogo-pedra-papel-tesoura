@@ -5,6 +5,10 @@
     cursor: default;
 }
 
+body{
+    background-image: url(./assets/images/background/background.png);
+}
+
 #main #title{
     text-align: center;
     color: #2d3436;
